@@ -17,12 +17,22 @@ header {
 
 /* Buttons box */
 #buttons {
-    border: solid rgb(83, 83, 83) 1px;
+    border: solid rgb(83, 83, 83) 2px;
+    padding: 5px;
+} #buttons button {
+  font-weight: bold;
+  padding: 5px;
 }
 
 /* Time box */
 #time-box {
-    border: solid rgb(83, 83, 83) 1px;
+    border: solid rgb(83, 83, 83) 2px;
+    padding: 0px 5px;
+    font-weight: bold;
+    font-size: 1.25em;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 /* DataTables stuff written manually */

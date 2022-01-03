@@ -10,16 +10,23 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script type="text/javascript" src="moment-timezone.js"></script>
+        <script type="text/javascript" src="moment-timezone-with-data-10-year-range.js"></script>
         <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
         <header>
             <h1>Japanese TV/Radio Livestream Guide</h1>
-            <div id="buttons">BUTTONS</div>
-            <div id="time-box"></div>
+            <div id="buttons">
+                <label for="buttons">Table filters:</label>
+                <button type="button" id="toggleTV">Hide TV</button>
+                <button type="button" id="toggleRadio">Hide Radio</button>
+                <button type="button" id="toggleNon24">Hide Non-24hr</button>
+                <button type="button" id="toggleIrregular">Hide Irregular</button><br>
+                <p>Search is in the top-right of the table. Asterisk indicates changing title.</p>
+            </div>
+            <div id="time-box">JST Clock<br>(uses JS)</div>
         </header>
-        <noscript>JavaScript is disabled. It doesn't need to be enabled to view this list, but the search, sort, and filter features will not work as a result.</noscript>
+        <noscript>JavaScript is disabled. It doesn't need to be enabled to view this list, but the time, search, sort, and filter features will not work as a result.</noscript>
         <main>
             <table id="programs">
                 <thead>
@@ -27,7 +34,7 @@
                         <th>Program</th>
                         <th>Broadcaster</th>
                         <th>Genre</th>
-                        <th>Schedule</th>
+                        <th>Schedule (JST)</th>
                         <th>Description</th>
                         <th>Radio/TV</th>
                         <th>URL</th>
@@ -35,13 +42,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>最新気象ニュース</td>
-                        <td>ウェザーニュース</td>
-                        <td>Weather</td>
-                        <td>24hr</td>
-                        <td>24-hour weather data from 'Weather News', a weather app based on user input rather than automation. Daytime reports are given every 30 minutes.</td>
-                        <td>TV</td>
-                        <td><a href="https://www.youtube.com/user/weathernews">YouTube</a></td>
+                        <td>最新気象ニュース</td><td>ウェザーニュース</td><td>Weather</td><td>24hr</td><td>24-hour weather data from 'Weather News', a weather app based on user input rather than automation. Daytime reports are given every 30 minutes.</td><td>TV</td><td><a href="https://www.youtube.com/user/weathernews">YouTube</a></td>
                     </tr>
                     <tr>
                         <td>JapaNews24</td><td>ANN</td><td>News</td><td>24hr</td><td>Brief coverage of recent events.</td><td>TV</td><td><a href="https://www.youtube.com/user/ANNnewsCH">YouTube</a></td>
