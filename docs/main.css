@@ -9,6 +9,22 @@ body {
     font-family: sans-serif;
 }
 
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+}
+
+/* Buttons box */
+#buttons {
+    border: solid rgb(83, 83, 83) 1px;
+}
+
+/* Time box */
+#time-box {
+    border: solid rgb(83, 83, 83) 1px;
+}
+
 /* DataTables stuff written manually */
 
 input[type="search"] {
